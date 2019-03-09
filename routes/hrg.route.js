@@ -23,7 +23,11 @@ HRGRoutes.route('/gethospitals').get(function (req, res) {
           distancearray.sort(function(a, b){
             return a.distance-b.distance
         })
-          res.send(distancearray);
+       var  newObject = distancearray .map(function (value, label) {
+          return value['data'];
+      });
+        
+          res.send(newObject);
         }
         });
         });
