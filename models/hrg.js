@@ -3,10 +3,10 @@ const Schema = mongoose.Schema;
 
 let HRG = new Schema({
   Name: String,
-  Email: String,
-  Password : String,
-  resetPasswordToken: String,
-  resetPasswordExpires: Date
+  Address: String,
+  lat: String,
+  long : String,
+  bedcount: Number,
 },{
     collection: 'HRG'
 });
