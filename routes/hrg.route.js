@@ -14,7 +14,6 @@ HRGRoutes.route('/gethospitals').get(function (req, res) {
       
       Business.find({}).limit(5).exec( function (err, userdata) {
         var distancearray= [];
-        console.log(req.query.coordinates);
       userdata.forEach(function(element) {
         request('https://dev.virtualearth.net/REST/v1/Routes/DistanceMatrix?origins='+req.query.coordinates+'&destinations='+element['lat']+','+element['long']+'&travelMode=driving&key=AgSDEuD8ucPw-rHtVEieHGwVHxvfiieVkfnOVNqlw0cs3X3M5_IWgiZ1qjlDagaD&distanceUnit=km&timeUnit=minutes', function (error, response, body) {
         distancearray.push({"data":element,"distance":JSON.parse(body)["resourceSets"][0]["resources"][0]["results"][0]['travelDistance']});
