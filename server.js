@@ -1,8 +1,8 @@
-const express = require('express'),
-  bodyParser = require('body-parser'),
-  cors = require('cors'),
-  mongoose = require('mongoose'),
-  config = require('./DB');
+var express = require('express');
+var  bodyParser = require('body-parser');
+ var cors = require('cors');
+ var  mongoose = require('mongoose');
+var  config = require('./DB');
 
 const hrgrouteshandler = require('./routes/hrg.route');
 mongoose.Promise = global.Promise;
@@ -16,6 +16,8 @@ app.use(cors());
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
+
+app.use('/api', hrgrouteshandler);
 
 
 app.use('/*', function(req,res){
