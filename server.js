@@ -4,13 +4,13 @@ var  bodyParser = require('body-parser');
  var  mongoose = require('mongoose');
 var  config = require('./DB');
 
-const hrgrouteshandler = require('./routes/hrg.route');
+var hrgrouteshandler = require('./routes/hrg.route');
 mongoose.Promise = global.Promise;
 mongoose.connect(config.DB, { useNewUrlParser: true }).then(
 );
 
 
-const app = express();
+var app = express();
 app.use(bodyParser.json());
 app.use(cors());
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
