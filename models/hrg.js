@@ -1,5 +1,5 @@
-const mongoose = require('../node_modules/mongoose');
-const Schema = mongoose.Schema;
+var mongoose = require('../node_modules/mongoose');
+var Schema = mongoose.Schema;
 
 let HRG = new Schema({
   Name: String,

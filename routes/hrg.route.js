@@ -1,5 +1,5 @@
-const express = require('../node_modules/express');
-const HRGRoutes = express.Router();
+var express = require('../node_modules/express');
+var HRGRoutes = express.Router();
 var request = require('../node_modules/request');
 
 
