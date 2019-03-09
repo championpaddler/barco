@@ -19,7 +19,6 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
 
-app.use('/api', hrgrouteshandler);
 
 app.use('/*', function(req,res){
   res.send("Api is working");
