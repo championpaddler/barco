@@ -10,7 +10,6 @@ let Business = require('../models/hrg');
 // Defined Create route
 HRGRoutes.route('/gethospitals').get(function (req, res) {
   try {
-      // res.send(JSON.parse(body)["resourceSets"][0]["resources"][0]["results"]);
       
       Business.find({}).limit(5).exec( function (err, userdata) {
         var distancearray= [];
