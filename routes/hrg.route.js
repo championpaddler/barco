@@ -79,7 +79,7 @@ HRGRoutes.route('/gethospitals').get(function (req, res) {
 //   data['Address'] = element['Address'];
 //   data['lat'] = element['Latitude'];
 //   data['long'] = element['Longitude'];
-//   data['bedcount'] = Math.floor(Math.random()*50).toString();
+//   data['bdc'] = Math.floor(Math.random()*50).toString();
 //   console.log(data);
 
 
