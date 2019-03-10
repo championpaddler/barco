@@ -25,7 +25,7 @@ HRGRoutes.route('/gethospitals').get(function (req, res) {
           return value['data'];
       });
         
-          res.send(JSON.stringify(newObject));
+          res.send(newObject);
         }
         });
         });
