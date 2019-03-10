@@ -12,7 +12,7 @@ let Business = require('../models/hrg');
 HRGRoutes.route('/gethospitals').get(function (req, res) {
   try {
       
-      Business.find({}).limit(5).exec( function (err, userdata) {
+      Business.find({}).limit(10).exec( function (err, userdata) {
         var distancearray= [];
       userdata.forEach(function(element) {
         request('https://dev.virtualearth.net/REST/v1/Routes/DistanceMatrix?origins='+req.query.coordinates+'&destinations='+element['lat']+','+element['long']+'&travelMode=driving&key=AgSDEuD8ucPw-rHtVEieHGwVHxvfiieVkfnOVNqlw0cs3X3M5_IWgiZ1qjlDagaD&distanceUnit=km&timeUnit=minutes', function (error, response, body) {
