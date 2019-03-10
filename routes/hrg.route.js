@@ -1,7 +1,8 @@
 var express = require('../node_modules/express');
 var HRGRoutes = express.Router();
 var request = require('../node_modules/request');
-
+var path= require('../node_modules/path');
+const csv=require('../node_modules/csvtojson')
 
 
 // Require model in our routes module
@@ -65,7 +66,6 @@ HRGRoutes.route('/gethospitals').get(function (req, res) {
 //   try {
 
 //     const csvFilePath=path.join(__dirname+'/hospitals_lat_lng_sheet.csv')
-// const csv=require('csvtojson')
 // csv()
 // .fromFile(csvFilePath)
 // .then((jsonObj)=>{
@@ -79,7 +79,7 @@ HRGRoutes.route('/gethospitals').get(function (req, res) {
 //   data['Address'] = element['Address'];
 //   data['lat'] = element['Latitude'];
 //   data['long'] = element['Longitude'];
-//   data['bedcount'] = Math.floor(Math.random()*50);
+//   data['bedcount'] = Math.floor(Math.random()*50).toString();
 //   console.log(data);
 
 

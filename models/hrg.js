@@ -6,7 +6,7 @@ let HRG = new Schema({
   Address: String,
   lat: String,
   long : String,
-  bedcount: Number,
+  bedcount: String,
 },{
     collection: 'HRG'
 });
